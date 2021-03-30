@@ -1,1 +1,83 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Visualisation of Random Graphs</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+        <style>
+            body {
+                font-family: 'Raleway', sans-serif;
+				letter-spacing: 0.02em;
+				margin: 0px;
+				background-color: #2d2d2d;
+				overflow: hidden;
+            }
+            img.logo {
+				position: absolute;
+				top: 30px;
+				left: 10px;
+				width: 240px;
+			}
+			.header {
+				font-size: 18px;
+    			margin-bottom: 15px;
+				font-weight: 600;
+				width: 170px;
+				word-wrap: break-word;
+			}
+			.error {
+				line-height: 24px;
+			}
+			.dock-window {
+				width: 200px;
+				margin-top: -90px;
+				margin-left: -105px;
+    			background: #c7c7c7;
+				border-radius: 5px;
+				padding: 15px;
+				word-wrap: break-word;
+
+				display: none;
+				position: absolute;
+                top: 250px;
+                left: 120px;
+				z-index: 10;
+			}
+			.close img {
+				width: 100%;
+			}
+			.close {
+				position: absolute;
+				width: 20px;
+				right: 13px;
+				cursor: pointer;
+			}
+            #buttons {
+                padding: 5px 5px 5px 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="buttons">
+            <button id="fruchterman-reingold-button">Fruchterman-Reingold</button>
+            <button id="community-button">Community</button>
+            <button id="powerlaw-button">Power Law</button>
+            <button id="random-kamada-kawai">Kamada-Kawai</button>
+            <button id='json-fr'>Import and Plot With FR</button>
+            <button id='json-kk'>Import and Plot With KK</button>
+        </div>
+        <script src="./Common.js"></script>
+        <script src="./jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+		<script src="./THREE.MeshLine.js"></script>
+        <script src="./OrbitControls.js"></script>
+        <script src="./Graph.js"></script>
+        <script src="./Vertex.js"></script>
+        <script src="./Edge.js"></script>
+        <script src="./Projector.js"></script>
+        <script src="./app_visualization.js"></script>
+        <img class="logo" src="./logo.png">
+        <div class="dock-window"></div>
+    </body>
+</html>
