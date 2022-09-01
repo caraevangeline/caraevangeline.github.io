@@ -6,6 +6,8 @@
   border:0;
   background:none;
   padding:0;
+  width: 50%;
+  height: 30%
 }
 input::-webkit-color-swatch-wrapper {
 	padding: 0;
@@ -15,6 +17,7 @@ input::-webkit-color-swatch-wrapper {
 }
 input::-webkit-color-swatch {
 	border: none;
+    
 }
  </style>
  <script>
@@ -108,7 +111,7 @@ function rgb_to_hsv(r , g , b) {
             else if (h.toFixed(1) >= 300 && h.toFixed(1) <=339)
                c2 = "Magenta";
             
-        alert("Current Binning algorithm: " + c1 + "\n New Binning algorithm: " + c2);
+        alert("Current Binning algorithm: " + c1 + "\nNew Binning algorithm: " + c2);
     }
  
     // Driver Code
@@ -129,7 +132,7 @@ function rgb_to_hsv(r , g , b) {
 </script>
  <body>
  	<br>
-   <b></b><label for="colorpicker">Color Picker:</label></b>
+   <!--<b><label for="colorpicker">Color Picker:</label></b>-->
    <input type="color" id="colorpicker" onchange="printColor(event)" value="#0000ff">
  </body>
 </html>
