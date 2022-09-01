@@ -1,573 +1,135 @@
-<!DOCTYPE HTML>
 <html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Cara Evangeline</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
-
-  <!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
-
-	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="./static/css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="./static/css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="./static/css/bootstrap.css">
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="./static/css/flexslider.css">
-	<!-- Flaticons  -->
-	<link rel="stylesheet" href="./static/fonts/flaticon/font/flaticon.css">
-	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="./static/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="./static/css/owl.theme.default.min.css">
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="./static/css/style.css">
-
-	<!-- Modernizr JS -->
-	<script src="./static/js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="./static/js/respond.min.js"></script>
-	<![endif]-->
-
-	</head>
-	<style>
-p.ex1 {
-  font-size: 30px;
+ <head>
+ </head>
+ <style type="text/css">
+ 	input {
+  border:0;
+  background:none;
+  padding:0;
 }
-p.ex2 {
-  font-size: 50px;
+input::-webkit-color-swatch-wrapper {
+	padding: 0;
+    margin:0;
+    
+    background:none;
 }
-</style>
-	<body>
-	<div id="colorlib-page">
-		<div class="container-wrap">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
-			<div class="text-center">
-				<div class="author-img" style="background-image: url(./static/images/about.jpg);"></div>
-				<h1 id="colorlib-logo"><a href="./">Cara Evangeline</a></h1>
-				<span class="position">Data Science Graduate Student</span>
-				<p><a href="./static/Cara_CV.pdf" class="btn btn-primary btn-learn" download>Download CV <i class="icon-download4"></i></a></p>
-			</div>
-			<nav id="colorlib-main-menu" role="navigation" class="navbar">
-				<div id="navbar" class="collapse">
-					<ul>
-						<li class="active"><a href="#home" data-nav-section="home">Home</a></li>
-						<li><a href="#about" data-nav-section="about">About</a></li>
-						
-						<li><a href="#skills" data-nav-section="skills">Skills</a></li>
-						<li><a href="#education" data-nav-section="education">Education</a></li>
-						<li><a href="#experience" data-nav-section="experience">Experience</a></li>
-						<!--<li><a href="#work" data-nav-section="work">Project</a></li>
-						<li><a href="#Blog" data-nav-section="blog">Blog</a></li>-->
-						<li><a href="#Contact" data-nav-section="contact">Contact</a></li>
-					</ul>
-				</div>
-			</nav>
+input::-webkit-color-swatch {
+	border: none;
+}
+ </style>
+ <script>
+// javascript program change RGB Color
+// Model to HSV Color Model   
+function rgb_to_hsv(r , g , b) {
+ 
+        // R, G, B values are divided by 255
+        // to change the range from 0..255 to 0..1
+        r = r / 255.0;
+        g = g / 255.0;
+        b = b / 255.0;
+ 
+        // h, s, v = hue, saturation, value
+        var cmax = Math.max(r, Math.max(g, b)); // maximum of r, g, b
+        var cmin = Math.min(r, Math.min(g, b)); // minimum of r, g, b
+        var diff = cmax - cmin; // diff of cmax and cmin.
+        var h = -1, s = -1;
+ 
+        // if cmax and cmax are equal then h = 0
+        if (cmax == cmin)
+            h = 0;
+ 
+        // if cmax equal r then compute h
+        else if (cmax == r)
+            h = (60 * ((g - b) / diff) + 360) % 360;
+ 
+        // if cmax equal g then compute h
+        else if (cmax == g)
+            h = (60 * ((b - r) / diff) + 120) % 360;
+ 
+        // if cmax equal b then compute h
+        else if (cmax == b)
+            h = (60 * ((r - g) / diff) + 240) % 360;
+ 
+        // if cmax equal zero
+        if (cmax == 0)
+            s = 0;
+        else
+            s = (diff / cmax) * 100;
+ 
+        // compute v
+        var v = cmax * 100;
+        let c1 = " ";
+        let c2 = " ";
+        if (s <  24 || v < 24)
+            if (v >=0 && v < 33.33)
+               c1 = "Black";
+            else if (v>= 33.33 && v < 66.66)
+               c1 = "Grey";
+            else
+               c1 = "White";
+        else
+            if ((h.toFixed(1) >= 0 && h.toFixed(1) <=29) || (h.toFixed(1) >= 330 && h.toFixed(1) <=359))
+               c1 = "Red";               
+            else if (h.toFixed(1) >= 30 && h.toFixed(1) <=59)
+               c1 = "Brown";              
+            else if (h.toFixed(1) >= 60 && h.toFixed(1) <=89)
+               c1 = "Yellow";               
+            else if (h.toFixed(1) >= 90 && h.toFixed(1) <=179)
+               c1 = "Green";              
+            else if (h.toFixed(1) >= 180 && h.toFixed(1) <=209)
+               c1 = "Cyan";               
+            else if (h.toFixed(1) >= 210 && h.toFixed(1) <=299)
+               c1 = "Blue";              
+            else if (h.toFixed(1) >= 300 && h.toFixed(1) <=329)
+               c1 = "Magenta";
 
-			<div class="colorlib-footer">
-				<p><small>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span> </small></p>
-				<ul>
-					<li><a href="#"><i class="icon-facebook2"></i></a></li>
-					<li><a href="#"><i class="icon-twitter2"></i></a></li>
-					<li><a href="#"><i class="icon-instagram"></i></a></li>
-					<li><a href="#"><i class="icon-linkedin2"></i></a></li>
-				</ul>
-			</div>
+        if (s <  24 && v >= 75)
+            c2 = "White";
+        else if (s < 24 && v < 75 && v > 24)
+            if ((h.toFixed(1) < 40 || h.toFixed(1) >= 340) && s >= 5)
+               c2 = "Brown";
+            else
+               c2 = "Grey"
+        else if ((s < 24 && v <= 24 && v > 15) ||  (v <= 24))
+            c2 = "Black";
+        else
+            if ((h.toFixed(1) >= 0 && h.toFixed(1) <=19) || (h.toFixed(1) >= 340 && h.toFixed(1) <=359))
+               c2 = "Red";               
+            else if (h.toFixed(1) >= 20 && h.toFixed(1) <=39)
+               c2 = "Brown";              
+            else if (h.toFixed(1) >= 40 && h.toFixed(1) <=59)
+               c2 = "Yellow";               
+            else if (h.toFixed(1) >= 60 && h.toFixed(1) <=179)
+               c2 = "Green";              
+            else if (h.toFixed(1) >= 180 && h.toFixed(1) <=199)
+               c2 = "Cyan";               
+            else if (h.toFixed(1) >= 200 && h.toFixed(1) <=299)
+               c2 = "Blue";              
+            else if (h.toFixed(1) >= 300 && h.toFixed(1) <=339)
+               c2 = "Magenta";
+            
+        alert("Current Binning algorithm: " + c1 + "\n New Binning algorithm: " + c2);
+    }
+ 
+    // Driver Code
+     
+        // rgb_to_hsv(45, 215, 0);
+        // rgb_to_hsv(31, 52, 29);
+        //rgb_to_hsv(129, 88, 47);
+ function printColor(ev) {
+  const color = ev.target.value
+  const r = parseInt(color.substr(1,2), 16)
+  const g = parseInt(color.substr(3,2), 16)
+  const b = parseInt(color.substr(5,2), 16)
+  rgb_to_hsv(r,g,b)
+}
 
-		</aside>
-
-		<div id="colorlib-main">
-			<section id="home" class="colorlib-hero js-fullheight" data-section="home">
-				<div class="flexslider js-fullheight" >
-					
-				   	<div style="background-image: url(./static/images/im.jpg);">
-				   		<div class="overlay"></div>
-				   		<div class="container-fluid">
-				   			<div class="row">
-					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-					   				<div class="slider-text-inner js-fullheight" >
-					   					<div class="desc">
-						   					
-						   					
-												
-											</div>
-					   				</div>
-					   			</div>
-					   		</div>
-				   		</div>
-				   	</div>
-				   
-				   	
-				  	
-			  	</div>
-			</section>
-
-			<section id ="about" class="colorlib-about" data-section="about">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="col-md-12">
-									<div class="about-desc">
-										<span class="heading-meta">About</span>
-										<h2 class="colorlib-heading">Who Am I?</h2>
-										<p><strong>Hi I'm Cara Evangeline</strong> I am a passionate Data Scientist. I have been giving my all possible effort to achieve what I am striving for! Having utilized all the resources and teachings I am very well acquainted with the concepts of Data Science to analyse the insights of data.  </p>
-										<p>I have worked as an intern where I have played the role of a Software Engineer to develop IT service system.
-										<p>My other interests are writing spiritual quotes and writing blogs and I am a strong believer of God from whom all wisdom flows. All that I am I owe it to him!</p>
-									</div>
-								</div>
-							</div>
-							
-							
-						</div>
-					</div>
-				</div>
-			</section>
-
-
-			
-			<section id="skills" class="colorlib-skills" data-section="skills">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">My Specialty</span>
-							<h2 class="colorlib-heading animate-box">My Skills</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<p>My Bachelors and Masters have collectively developed my skills in various areas</p>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>Python</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="75"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:75%">
-								    <span>75%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>R</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="70"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
-								    <span>70%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>HTML</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="95"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:95%">
-								    <span>95%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>CSS</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
-								    <span>90%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>C++</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="80"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:80%">
-								    <span>80%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>C</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:80%">
-								    <span>80%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>PHP</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="90"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
-								    <span>90%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>Java</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="50"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:50%">
-								    <span>50%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>MS Word</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="90"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
-								    <span>90%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>.NET Framework</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="50"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:50%">
-								    <span>50%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>Shell Scripting</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="60"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:60%">
-								    <span>60%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>SQL</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="85"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:85%">
-								    <span>85%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>C#</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="50"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:50%">
-								    <span>50%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>Bootstrap</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="70"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
-								    <span>70%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>Matlab</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="50"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:50%">
-								    <span>50%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>Hadoop - Map Reduce</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="70"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
-								    <span>70%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>Assembly Language</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="50"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:50%">
-								    <span>50%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>MS Excel</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="65"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:65%">
-								    <span>65%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>Latex</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="90"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
-								    <span>90%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>Apache Spark Programming</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="75"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:75%">
-								    <span>75%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="education" class="colorlib-education" data-section="education">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Education</span>
-							<h2 class="colorlib-heading animate-box">Education</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<div class="fancy-collapse-panel">
-								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingOne">
-									        <h4 class="panel-title">
-									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Queen Mary University of London Msc Big Data Science
-									            </a>
-									        </h4>
-									    </div>
-									    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-									         <div class="panel-body">
-									            <p> <strong>Modules</strong></p>
-													<ul>
-														<li>Data mining: Learnt about taxonomy of problems, knowledge representation such as regression, decision trees and evaluated using various techiniques like cross validation</li>
-														<li>Machine Learning: Probability and random variable and statistical inference about the models  </li>
-														<li>Applied Statistics: Discriptive Statistics, Probability distributions, hypothesis testing and time-series analysis</li>
-														<li>Big Data Processing: Covered new large-scale programming models that allows to easily create algorithms to process massive amount of information with a cluster of computer nodes using Hadoop and Spark programming</li>
-													</ul>
-												<p> <strong>Project</strong></p>
-												Currently working on computer vision involving Textual description of object in an Image using Deep Neural Network. With this, visually impaired people can have an idea of what an image consists of. Used python to code methodologies related to Natural language processing, machine translation, Transfer Learning
-									         </div>
-									    </div>
-									</div>
-									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingTwo">
-									        <h4 class="panel-title">
-									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">National Institute of Technology, India B.Tech Computer Science
-									            </a>
-									        </h4>
-									    </div>
-									    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-									        <div class="panel-body">
-									            <p><strong>Modules</strong></p>
-													<ul>
-														<li>Database Management Systems: Worked on a mini-task developed by one of the prestigious institute of India (IIT) that involves SQL and relational databases.</li>
-														<li>Data Structures: Coded Dijkstra's, Prims, Kurskals, cryptographic and various other algorithms</li>
-														<li>Data Warehousing And Data Mining: Analysed mining algorithms for customer retention in banking sector, association algorithms for supermarkets.</li>
-														<li>Distributed Computing: Gained the knowledge of various distributed algorithms for coordination, communication, security and synchronization in distributed systems</li>
-														<li>Machine Learning And Soft Computing: Learnt probabilistic models and gaussian mixtures</li>
-														<li>Unix Tools And Programming: Worked on Shell scripting and learnt about various user privileges, Created a basic operating system using Nasm assembler and Qemu simulator in virtual box.</li>
-														<li>Business Intelligence: Mastered the art of NLP and did analysis on research papers related to deep neural networks.</li>
-													</ul>
-									        </div>
-									    </div>
-									</div>
-									
-
-									
-
-									
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="experience" class="colorlib-experience" data-section="experience">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Work Experience</span>
-							<h2 class="colorlib-heading animate-box">Internships</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-				         <div class="timeline-centered">
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-					            <div class="timeline-entry-inner">
-
-					               <div class="timeline-icon color-1">
-					                  <i class="icon-pen2"></i>
-					               </div>
-
-					               <div class="timeline-label">
-					                  <h2><a href="#">Qube Cinema Technology, India - IT Intern</a> <span>June2018 - July2018</span></h2>
-					                  <ul>
-					                  	<li>Worked on web development for the use of IT staffs to co-ordinate the list of service request made by the employees in the company</li>
-					                  	<li>Technologies used: PHP, HTML, CSS, Javascript, XAMPP, Bootstrap</li>
-					                  	<li>My work was benchmarked and I was asked to do a presentation regarding my work before HR department.</li>
-					                  	<li>It is an add-on experience to boost my individuality.</li>
-					                  </ul>
-					               </div>
-					            </div>
-					         </article>
-
-
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-2">
-					                  <i class="icon-pen2"></i>
-					               </div>
-					               <div class="timeline-label">
-					               	<h2><a href="#">HCL, India - Web Developer </a> <span>June2016 - July2016</span></h2>
-					                  <p>Designed webpages using C# in Microsoft Visual Studio and developed a Banking website as mini project.</p>
-					               </div>
-					            </div>
-					         </article>
-
-					        
-					      </div>
-					   </div>
-				   </div>
-				</div>
-			</section>
-
-
-			<section id="contact" class="colorlib-contact" data-section="contact">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Get in Touch</span>
-							<h2 class="colorlib-heading">Contact</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-5">
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-globe-outline"></i>
-								</div>
-								<div class="colorlib-text">
-									<p><a href="#">caraevangeline10@gmail.com</a></p>
-								</div>
-							</div>
-
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-map"></i>
-								</div>
-								<div class="colorlib-text">
-									<p>54 Stayner's road,<br> London - E1 4AH, <br>United Kingdom</p>
-								</div>
-							</div>
-
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-phone"></i>
-								</div>
-								<div class="colorlib-text">
-									<p><a href="tel://">+44 7466832767</a></p>
-								</div>
-							</div>
-						</div>
-						
-					</div>
-				</div>
-			</section>
-
-		</div><!-- end:colorlib-main -->
-	</div><!-- end:container-wrap -->
-	</div><!-- end:colorlib-page -->
-
-	<!-- jQuery -->
-	<script src="./static/js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="./static/js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="./static/js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="./static/js/jquery.waypoints.min.js"></script>
-	<!-- Flexslider -->
-	<script src="./static/js/jquery.flexslider-min.js"></script>
-	<!-- Owl carousel -->
-	<script src="./static/js/owl.carousel.min.js"></script>
-	<!-- Counters -->
-	<script src="./static/js/jquery.countTo.js"></script>
-	
-	
-	<!-- MAIN JS -->
-	<script src="./static/js/main.js"></script>
-
-	</body>
+ 
+// This code is contributed by todaysgaurav
+</script>
+ <body>
+ 	<br>
+   <b></b><label for="colorpicker">Color Picker:</label></b>
+   <input type="color" id="colorpicker" onchange="printColor(event)" value="#0000ff">
+ </body>
 </html>
-
