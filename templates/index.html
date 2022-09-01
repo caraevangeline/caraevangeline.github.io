@@ -71,47 +71,47 @@ function rgb_to_hsv(r , g , b) {
             else
                c1 = "White";
         else
-            if ((h.toFixed(1) >= 0 && h.toFixed(1) <=29) || (h.toFixed(1) >= 330 && h.toFixed(1) <=359))
+            if ((h.toFixed(0) >= 0 && h.toFixed(0) <=29) || (h.toFixed(0) >= 330 && h.toFixed(0) <=359))
                c1 = "Red";               
-            else if (h.toFixed(1) >= 30 && h.toFixed(1) <=59)
+            else if (h.toFixed(0) >= 30 && h.toFixed(0) <=59)
                c1 = "Brown";              
-            else if (h.toFixed(1) >= 60 && h.toFixed(1) <=89)
+            else if (h.toFixed(0) >= 60 && h.toFixed(0) <=89)
                c1 = "Yellow";               
-            else if (h.toFixed(1) >= 90 && h.toFixed(1) <=179)
+            else if (h.toFixed(0) >= 90 && h.toFixed(0) <=179)
                c1 = "Green";              
-            else if (h.toFixed(1) >= 180 && h.toFixed(1) <=209)
+            else if (h.toFixed(0) >= 180 && h.toFixed(0) <=209)
                c1 = "Cyan";               
-            else if (h.toFixed(1) >= 210 && h.toFixed(1) <=299)
+            else if (h.toFixed(0) >= 210 && h.toFixed(0) <=299)
                c1 = "Blue";              
-            else if (h.toFixed(1) >= 300 && h.toFixed(1) <=329)
+            else if (h.toFixed(0) >= 300 && h.toFixed(0) <=329)
                c1 = "Magenta";
 
         if (s <  24 && v >= 75)
             c2 = "White";
         else if (s < 24 && v < 75 && v > 24)
-            if ((h.toFixed(1) < 40 || h.toFixed(1) >= 340) && s >= 5)
+            if ((h.toFixed(0) < 40 || h.toFixed(0) >= 340) && s >= 5)
                c2 = "Brown";
             else
                c2 = "Grey"
         else if ((s < 24 && v <= 24 && v > 15) ||  (v <= 24))
             c2 = "Black";
         else
-            if ((h.toFixed(1) >= 0 && h.toFixed(1) <=19) || (h.toFixed(1) >= 340 && h.toFixed(1) <=359))
+            if ((h.toFixed(0) >= 0 && h.toFixed(0) <=19) || (h.toFixed(0) >= 340 && h.toFixed(0) <=359))
                c2 = "Red";               
-            else if (h.toFixed(1) >= 20 && h.toFixed(1) <=39)
+            else if (h.toFixed(0) >= 20 && h.toFixed(0) <=39)
                c2 = "Brown";              
-            else if (h.toFixed(1) >= 40 && h.toFixed(1) <=59)
+            else if (h.toFixed(0) >= 40 && h.toFixed(0) <=59)
                c2 = "Yellow";               
-            else if (h.toFixed(1) >= 60 && h.toFixed(1) <=179)
+            else if (h.toFixed(0) >= 60 && h.toFixed(0) <=179)
                c2 = "Green";              
-            else if (h.toFixed(1) >= 180 && h.toFixed(1) <=199)
+            else if (h.toFixed(0) >= 180 && h.toFixed(0) <=199)
                c2 = "Cyan";               
-            else if (h.toFixed(1) >= 200 && h.toFixed(1) <=279)
+            else if (h.toFixed(0) >= 200 && h.toFixed(0) <=279)
                c2 = "Blue";              
-            else if (h.toFixed(1) >= 280 && h.toFixed(1) <=339)
+            else if (h.toFixed(0) >= 280 && h.toFixed(0) <=339)
                c2 = "Magenta";
             
-        alert("Current Binning algorithm: " + c1 + "\nNew Binning algorithm: " + c2);
+        alert("Current Binning algorithm: " + c1 + "\nNew Binning algorithm: " + c2 );
     }
  
     // Driver Code
