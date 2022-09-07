@@ -86,21 +86,21 @@ function rgb_to_hsv(r , g , b) {
             else if (h.toFixed(0) >= 300 && h.toFixed(0) <=329)
                c1 = "Magenta";
 
-        if (s <  24 && v >= 75)
+        if (s <  24 && v >= 70)
             c2 = "White";
-        else if (s < 24 && v < 75 && v > 24)
+        else if (s < 24 && v < 70 && v > 30)
             if ((h.toFixed(0) < 40 || h.toFixed(0) >= 340) && s >= 5)
                c2 = "Brown";
             else
                c2 = "Grey"
-        else if ((s < 24 && v <= 24 && v > 15) ||  (v <= 24))
+        else if ((s < 24 && v <= 30 && v > 15) ||  (v <= 24))
             c2 = "Black";
         else
             if ((h.toFixed(0) >= 0 && h.toFixed(0) <=19) || (h.toFixed(0) >= 340 && h.toFixed(0) <=359))
                c2 = "Red";               
-            else if (h.toFixed(0) >= 20 && h.toFixed(0) <=39)
+            else if (h.toFixed(0) >= 20 && h.toFixed(0) <=49)
                c2 = "Brown";              
-            else if (h.toFixed(0) >= 40 && h.toFixed(0) <=59)
+            else if (h.toFixed(0) >= 50 && h.toFixed(0) <=59)
                c2 = "Yellow";               
             else if (h.toFixed(0) >= 60 && h.toFixed(0) <=179)
                c2 = "Green";              
